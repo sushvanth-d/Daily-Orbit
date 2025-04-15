@@ -1,5 +1,6 @@
 /* NewsCard.css */
 
+/* Base Styles for NewsCard */
 .news-card {
   background-color: #f9f6ee; /* Light royal tint */
   border-radius: 10px;
@@ -16,51 +17,82 @@
 }
 
 .news-card-content {
-    padding: 1rem;
-  }
-  
-  .news-card-content img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-  }
-  
-  .news-card-content h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #1a1a40;
-  }
-  
-  .news-card-content p {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.5;
-  }
-  
-  .news-card-content a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .news-card-content a:hover {
-    text-decoration: underline;
-  }
-  
+  padding: 1rem;
+}
 
+.news-card-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
 
-/* Replace 'dark-mode' with 'dark' */
+.news-card-content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #1a1a40;
+}
+
+.news-card-content p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.news-card-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.news-card-content a:hover {
+  text-decoration: underline;
+}
+
+/* Loading State Placeholder */
+.image-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark Mode Styles */
 body.dark .news-card {
-  background-color: #262645; /* Deep navy */
+  background-color: #262645; /* Deep navy for dark mode */
 }
 
 body.dark .news-card-content h3,
 body.dark .news-card-content p {
-  color: #f2f2f2;
+  color: #f2f2f2; /* Light text color in dark mode */
 }
 
 body.dark .news-card-content a {
-  color: #f5c518;
+  color: #f5c518; /* Yellow for links in dark mode */
+}
+
+/* Optional: Add a spinner in place of the image placeholder */
+.image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.image-placeholder::after {
+  content: '';
+  border: 4px solid transparent;
+  border-top: 4px solid #333;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
