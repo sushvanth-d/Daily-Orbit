@@ -13,31 +13,27 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false); // To handle errors
 
-  const apiKey = '4c8afeefd2d2406ab688b81559fe918b';  // Your API Key
+  const apiKey = 'eb7cb23506973268982ac4de66707ad6';  // Your API Key
 
   useEffect(() => {
     const fetchNews = async () => {
       setLoading(true);
-      setError(false); // Reset error state on new fetch
-
-      const requestURL = `https://newsapi.org/v2/top-headlines?category=${selectedCategory}&page=${page}&pageSize=15&apiKey=${apiKey}`;
-
+      setError(false);
+    
+      const requestURL = `https://gnews.io/api/v4/top-headlines?category=${selectedCategory}&page=${page}&max=16&lang=en&apikey=${apiKey}`;
+    
       console.log("Fetching data from:", requestURL);  // Log the request URL
-
+    
       try {
         const res = await fetch(requestURL);
         const data = await res.json();
+        console.log(data); // Log the full response to check if images are being returned
         
         if (data.status !== 'ok' || !data.articles || data.articles.length === 0) {
           console.error("No articles found or error occurred:", data);
         }
-
-        if (page === 1) {
-          setArticles(data.articles);
-        } else {
-          setArticles((prev) => [...prev, ...data.articles]);
-        }
-
+    
+        setArticles(data.articles);
         setTotalResults(data.totalResults);
       } catch (error) {
         console.error("Error fetching news:", error);
@@ -46,6 +42,7 @@ const Home = () => {
         setLoading(false);
       }
     };
+    
 
     fetchNews();
   }, [selectedCategory, searchTerm, page]);
