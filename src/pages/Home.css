@@ -1,0 +1,170 @@
+
+  
+  .load-more-btn:hover {
+    background-color: #e6c200;
+  }
+  
+  /* Add this to your Home.css file */
+.empty-state {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .loading-message {
+    text-align: center;
+    font-size: 1rem;
+    color: #888;
+  }
+  
+
+  /* Home.css */
+
+.home-container {
+    padding: 2rem;
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;  /* Space between the boxes */
+    margin-top: 1.5rem;
+  }
+  
+
+  .load-more-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Styling for individual news cards */
+  .news-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .news-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .news-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .news-card-content {
+    padding: 1rem;
+  }
+  
+  .news-card-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .news-card-content p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+
+  /* Home.css */
+
+/* Wrapper for the entire home page */
+.home-container {
+    padding: 2rem;
+  }
+  
+  /* Grid Layout for News Articles */
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem; /* Space between the boxes */
+    margin-top: 1.5rem;
+  }
+  
+  /* Button to load more articles */
+  .load-more-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 0.6rem 1.8rem;
+    background-color: #6A1B9A;  /* Royal Purple */
+    color: #F1C40F;  /* Gold */
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .load-more-btn:hover {
+    background-color: #9C27B0;  /* Darker Purple */
+    transform: scale(1.05);
+  }
+
+  .load-more-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for individual news cards (ensure same height for all cards) */
+  .news-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;  /* Ensure full height */
+    min-height: 350px;  /* Set a minimum height for each card */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for the cards */
+  .news-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .news-card img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover;
+  }
+  
+  .news-card-content {
+    padding: 1rem;
+    flex-grow: 1;  /* Ensure this part grows to take up remaining space */
+  }
+  
+  .news-card-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .news-card-content p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .news-card-content a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .news-card-content a:hover {
+    text-decoration: underline;
+  }
+  
